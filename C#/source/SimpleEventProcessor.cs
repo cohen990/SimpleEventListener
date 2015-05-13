@@ -16,6 +16,7 @@
         {
             Console.WriteLine("SimpleEventProcessor initialize.  Partition: '{0}', Offset: '{1}'", context.Lease.PartitionId, context.Lease.Offset);
             _partitionContext = context;
+            _checkpointStopWatch = new Stopwatch();
             _checkpointStopWatch.Start();
             return Task.FromResult<object>(null);
         }

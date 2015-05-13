@@ -21,6 +21,8 @@
 
             Console.WriteLine("Press enter key to stop worker.");
             Console.ReadLine();
+
+            r.UnregisterEventProcessor();
         }
     }
 }
